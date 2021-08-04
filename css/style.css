@@ -1,0 +1,249 @@
+@font-face {
+	font-family: "Georama";
+	src: url(fonts/Georama-VariableFont_wdth,wght.ttf);
+}
+
+@font-face {
+	font-family: "Montserrat-Light";
+	src: url(fonts/Montserrat-Light.ttf);
+}
+
+
+
+body{
+	background-color: #2e6c91;
+}
+
+.choose-user{
+	font-family: "Georama";
+}
+
+.choose-user .users p{
+	width: 350px;
+	height: 20px;
+	margin-bottom: 10px;
+	background-color: white;
+	padding:  5px 10px;
+	border-radius: 6px;
+}
+
+.choose-user .users p a{
+	float: left;
+	width: 100%;
+	height: 100%;
+	text-decoration: none;
+	color:  #2e6c91;
+}
+
+.ada-chat{
+	position: fixed;
+	bottom: 15px;
+	right: 15px;
+	height: 450px;
+	width: 350px;
+	border-radius: 10px;
+	background-color: white;
+	font-family: "Georama";	
+}
+
+.ada-chat .header{
+	float: left;
+	width: 100%;
+	height: 55px;
+	padding-top: 15px;
+}
+
+.ada-chat .header .avatar{
+	float: left;
+	width: 50px;
+	margin-left: 15px;
+}
+
+.ada-chat .history .msg-in .avatar-container .avatar-round,
+.ada-chat .history .msg-out .avatar-container .avatar-round,
+.ada-chat .header .avatar .avatar-round,
+.ada-chat .history .participants-avatar .avatar-round{
+	float: left;
+	width: 40px;
+	height: 40px;
+	border-radius: 40px;
+	background-color: lightgray;
+	text-align: center;
+	color: white;
+	font-size: 25px;
+	line-height: 40px;
+	background: rgb(34,113,177);
+	background: linear-gradient(0deg, rgba(34,113,177,0.9598039899553571) 0%, rgba(46,108,145,1) 42%);
+	text-transform: uppercase;
+}
+
+.ada-chat .header .participants{
+	float: left;
+	width: calc(100% - 110px);
+	height: 40px;
+	line-height: 40px;
+	font-size: 12px;
+	text-transform: uppercase;
+	text-overflow: ellipsis;
+	overflow: hidden;
+}
+
+.ada-chat .header .participants .participant{
+	font-weight: bold;
+	color: #333;
+}
+
+.ada-chat .header .button-close{
+	float: left;
+	width: 40px;
+	height: 40px;
+	line-height: 40px;
+	text-align: center;
+	color: #aaa;
+	font-size: 22px;
+}
+
+.ada-chat .history{
+	float: left;
+	width: 100%;
+	height: calc(100% - 125px);
+	background-color: #2e6c9142;
+}
+
+.ada-chat .history .messages{
+	float: left;
+	width: 100%;
+	height: 275px;
+	overflow-y: scroll;
+}
+
+.ada-chat .history .msg-in,
+.ada-chat .history .msg-out{	
+	width: 80%;	
+	margin-top: 10px;
+	padding: 7px;
+	border-radius: 12px;
+	animation: opacityIn 0.5s;
+}
+
+.ada-chat .history .msg-in{
+	float: left;
+	margin-left: 10px;
+	background-color: #bdbdbd;
+}
+
+@keyframes opacityIn { 
+	0% { 
+		opacity: 0;
+	}
+	100% { 
+		opacity: 1;
+
+	}
+
+
+}
+
+.ada-chat .history .msg-out{
+	float: right;
+	margin-right: 10px;
+	background-color: #2e6c91;
+}
+
+.ada-chat .history .msg-in .avatar-container,
+.ada-chat .history .msg-out .avatar-container{
+	float: left;
+	height: 100%;
+}
+
+.ada-chat .history .msg-in .msg-content,
+.ada-chat .history .msg-out .msg-content{
+	float: left;
+	width: 200px;
+	font-family: "Montserrat-Light";
+	font-size: 13px;	
+	line-height: 16px;
+	margin-left: 20px;
+}
+
+.ada-chat .history .msg-in .msg-content{
+	color: #000;	
+}
+
+.ada-chat .history .msg-out .msg-content{
+	color: white;
+}
+
+.ada-chat .history .participants-avatar{
+	float: left;
+	width: 100%;
+	height: 40px;
+	position: absolute;
+	bottom: 55px;
+}
+
+.ada-chat .history .msg-in .avatar-container .avatar-round,
+.ada-chat .history .participants-avatar .avatar-round{
+	width: 25px;
+	height: 25px;
+	line-height: 25px;
+	font-size: 12px;
+	margin-left: 3px;
+	opacity: 0.3;
+	border: 3px solid transparent;
+	text-transform: uppercase;
+}
+
+.ada-chat .history .participants-avatar .avatar-round:first-child{
+	margin-left: 10px;
+}
+
+.ada-chat .history .msg-in .avatar-container .avatar-round,
+.ada-chat .history .participants-avatar .avatar-round.active{
+	opacity: 1;
+}
+
+.ada-chat .history .participants-avatar .avatar-round.active{
+	animation: rouded 2s linear infinite;
+}
+
+@keyframes rouded { 
+	50% { 
+		opacity: 0.8;
+		border: 3px solid #a503fc;
+	}
+
+	100% { 
+		opacity: 1;
+
+		border: 3px solid #fc038c;
+	}
+
+
+}
+
+
+.ada-chat .insert{
+	float: left;
+	width: 100%;
+	height: 50px;
+	padding-top: 5px;	
+}
+
+.ada-chat .insert input.write-msg{
+	float: left;
+	width: 94%;
+	height: 35px;
+	padding-left: 10px;
+	padding-right: 10px;
+}
+
+.ada-chat .insert input.write-msg,
+.ada-chat .insert input.write-msg:focus{
+	border: none;
+	outline: none;
+}
+
+.ada-chat .insert input.write-msg.disabled{
+	background-color: gray;
+}
